@@ -1,0 +1,13 @@
+ObjectType = Image
+NDims = 3
+BinaryData = True
+BinaryDataByteOrderMSB = False
+CompressedData = False
+TransformMatrix = 1 0 0 0 1 0 0 0 1
+Offset = 41.9708 -122.959 1043.29
+CenterOfRotation = 0 0 0
+AnatomicalOrientation = RAI
+ElementSpacing = 0.402344 0.402344 0.299988
+DimSize = 28 28 28
+ElementType = MET_FLOAT
+ElementDataFile = A3_D2_L3.raw
