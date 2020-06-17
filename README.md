@@ -10,7 +10,7 @@ The design of the spherical fiducial marker available in this repository is prot
 
 The segmentation code is implemented in C++ and is based on image processing algorithms available in [ITK](https://itk.org/).
 
-[fiducial_segmentation](https://github.com/mregodic/FiducialMarkers/fiducial_segmentation) and [fiducial_segmentation_gpu](https://github.com/mregodic/FiducialMarkers/fiducial_segmentation_gpu) provide code for running segmentation of volumetric CT images with and without GPU acceleration.
+[fiducial_segmentation](https://github.com/mregodic/FiducialMarkers/tree/master/fiducial_segmentation) and [fiducial_segmentation_gpu](https://github.com/mregodic/FiducialMarkers/tree/master/fiducial_segmentation_gpu) provide code for running segmentation of volumetric CT images with and without GPU acceleration.
 
 The GPU implementation utilizes [OpenCL accelerated GPU binary morphology image filters for ITK](http://hdl.handle.net/10380/3525).
 
@@ -24,14 +24,14 @@ This method also investigates open-set techniques Entropic OpenSet and Objectosp
 
 The general structure is the following:
 
-- [fiducial_classification/fiducial_training.py](https://github.com/mregodic/FiducialMarkers/fiducial_classification/fiducial_training.py) provides training for the deep neural network.
-- [fiducial_classification/fiducial_dataset.py](https://github.com/mregodic/FiducialMarkers/fiducial_classification/fiducial_dataset.py) loads the fiducial dataset.
-- [fiducial_classification/fiducial_dataset.h5](https://github.com/mregodic/FiducialMarkers/fiducial_classification/fiducial_dataset.h5) contains a limited sample of fiducial markers and other structures in order to test the code.
-- [fiducial_classification/analyze_3D.py](https://github.com/mregodic/FiducialMarkers/fiducial_classification/analyze_3D.py) reads the fiducial datasets, performs predictions using the saved trained models, and analyzes the Open-Set Classification Rate (OSCR) for all four classifiers. 
-- [fiducial_classification/evaluation_tools.py](https://github.com/mregodic/FiducialMarkers/fiducial_classification/evaluation_tools.py) evaluates the OSCR curve only for a single class and stores the detection rates for thresholds in files for each classifier (see method write_file_best_tresholds).
-- [fiducial_classification/evaluate_overall_accuracy.py](https://github.com/mregodic/FiducialMarkers/fiducial_classification/evaluate_overall_accuracy.py) evaluates the overall sensitivity, specificity and balanced accuracy based on the determined thresholds (see method write_file_best_tresholds).
+- [fiducial_classification/fiducial_training.py](https://github.com/mregodic/FiducialMarkers/tree/master/fiducial_classification/fiducial_training.py) provides training for the deep neural network.
+- [fiducial_classification/fiducial_dataset.py](https://github.com/mregodic/FiducialMarkers/tree/master/fiducial_classification/fiducial_dataset.py) loads the fiducial dataset.
+- [fiducial_classification/fiducial_dataset.h5](https://github.com/mregodic/FiducialMarkers/tree/master/fiducial_classification/fiducial_dataset.h5) contains a limited sample of fiducial markers and other structures in order to test the code.
+- [fiducial_classification/analyze_3D.py](https://github.com/mregodic/FiducialMarkers/tree/master/fiducial_classification/analyze_3D.py) reads the fiducial datasets, performs predictions using the saved trained models, and analyzes the Open-Set Classification Rate (OSCR) for all four classifiers. 
+- [fiducial_classification/evaluation_tools.py](https://github.com/mregodic/FiducialMarkers/tree/master/fiducial_classification/evaluation_tools.py) evaluates the OSCR curve only for a single class and stores the detection rates for thresholds in files for each classifier (see method write_file_best_tresholds).
+- [fiducial_classification/evaluate_overall_accuracy.py](https://github.com/mregodic/FiducialMarkers/tree/master/fiducial_classification/evaluate_overall_accuracy.py) evaluates the overall sensitivity, specificity and balanced accuracy based on the determined thresholds (see method write_file_best_tresholds).
 
-The trained models that are used to generate the results in the paper can be obtained in [fiducial_classification/Model_Results/Models](https://github.com/mregodic/FiducialMarkers/fiducial_classification/fiducial_classification/Model_Results/Models).
+The trained models that are used to generate the results in the paper can be obtained in [fiducial_classification/Model_Results/Models](https://github.com/mregodic/FiducialMarkers/fiducial_classification/tree/master/fiducial_classification/Model_Results/Models).
 
 ## Fiducial Localization
 
@@ -43,18 +43,18 @@ Once the two meshes are aligned, the fiducial position is calculated based on th
 
 The [CMake](https://cmake.org/) software can be used to build the project files.
 
-Samples of screw and spherical fiducial test data needed to run the code can be found in [fiducial_localization/src/test_data](https://github.com/mregodic/FiducialMarkers/fiducial_localization/src/test_data).
+Samples of screw and spherical fiducial data needed to run the code can be found in [fiducial_localization/src/test_data](https://github.com/mregodic/FiducialMarkers/tree/master/fiducial_localization/src/test_data).
 
 ## Virtual Phantoms
 
-[virtual_phantoms](https://github.com/mregodic/FiducialMarkers/virtual_phantoms) provides mesh models that are used as inputs to [CONRAD](https://www5.cs.fau.de/conrad/) in order to generate a virtual CT used for establishing the ground-truth environment to estimate the localization accuracy.
+[virtual_phantoms](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms) provides mesh models that are used as inputs to [CONRAD](https://www5.cs.fau.de/conrad/) in order to generate a virtual CT used for establishing the ground-truth environment to estimate the localization accuracy.
 
-An example of the setup and how to configure [CONRAD](https://www5.cs.fau.de/conrad/) is described in [virtual_phantoms/virtualct_readme_milo.docx](https://github.com/mregodic/FiducialMarkers/virtual_phantoms/virtualct_readme_milo.docx)
+An example of the setup and how to configure [CONRAD](https://www5.cs.fau.de/conrad/) is described in [virtual_phantoms/virtualct_readme_milo.docx](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/virtualct_readme_milo.docx)
 
 The available phantom scenes and mesh models can be opened via [ParaView](https://www.paraview.org/) and [Blender](https://www.blender.org/):
 
-[virtual_phantoms/screw 4p5mm](https://github.com/mregodic/FiducialMarkers/virtual_phantoms/screw 4p5mm) - A phantom scene for screws 3.0 mm x 4.5 mm
-[virtual_phantoms/screw_3mm](https://github.com/mregodic/FiducialMarkers/virtual_phantoms/screw_3mm) - A phantom scene for screws 2.0 mm x 3.0 mm
-[virtual_phantoms/screw_3p75mm](https://github.com/mregodic/FiducialMarkers/virtual_phantoms/screw_3p75mm) - A phantom scene for screws 3.0 mm x 3.75 mm
-[virtual_phantoms/spherical_3mm](https://github.com/mregodic/FiducialMarkers/virtual_phantoms/spherical_3mm) - A phantom scene for spherical fiducial 3.0 mm x 6.0 mm
-[virtual_phantoms/spherical_4mm](https://github.com/mregodic/FiducialMarkers/virtual_phantoms/spherical_4mm) - A phantom scene for spherical fiducial 4.0 mm x 8.0 mm
+[virtual_phantoms/screw 4p5mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/screw 4p5mm) - A phantom scene for screws 3.0 mm x 4.5 mm
+[virtual_phantoms/screw_3mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/screw_3mm) - A phantom scene for screws 2.0 mm x 3.0 mm
+[virtual_phantoms/screw_3p75mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/screw_3p75mm) - A phantom scene for screws 3.0 mm x 3.75 mm
+[virtual_phantoms/spherical_3mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/spherical_3mm) - A phantom scene for spherical fiducial 3.0 mm x 6.0 mm
+[virtual_phantoms/spherical_4mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/spherical_4mm) - A phantom scene for spherical fiducial 4.0 mm x 8.0 mm
