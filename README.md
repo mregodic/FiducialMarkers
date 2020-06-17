@@ -31,7 +31,7 @@ The general structure is the following:
 - [fiducial_classification/evaluation_tools.py](https://github.com/mregodic/FiducialMarkers/tree/master/fiducial_classification/evaluation_tools.py) evaluates the OSCR curve only for a single class and stores the detection rates for thresholds in files for each classifier (see method write_file_best_tresholds).
 - [fiducial_classification/evaluate_overall_accuracy.py](https://github.com/mregodic/FiducialMarkers/tree/master/fiducial_classification/evaluate_overall_accuracy.py) evaluates the overall sensitivity, specificity and balanced accuracy based on the determined thresholds (see method write_file_best_tresholds).
 
-The trained models that are used to generate the results in the paper can be obtained in [fiducial_classification/Model_Results/Models](https://github.com/mregodic/FiducialMarkers/fiducial_classification/tree/master/fiducial_classification/Model_Results/Models).
+The trained models that are used to generate the results in the paper can be obtained in [fiducial_classification/Model_Results/Models](https://github.com/mregodic/FiducialMarkers/tree/master/fiducial_classification/Model_Results/Models).
 
 ## Fiducial Localization
 
@@ -53,8 +53,8 @@ An example of the setup and how to configure [CONRAD](https://www5.cs.fau.de/con
 
 The available phantom scenes and mesh models can be opened via [ParaView](https://www.paraview.org/) and [Blender](https://www.blender.org/):
 
-[virtual_phantoms/screw 4p5mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/screw 4p5mm) - A phantom scene for screws 3.0 mm x 4.5 mm
-[virtual_phantoms/screw_3mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/screw_3mm) - A phantom scene for screws 2.0 mm x 3.0 mm
-[virtual_phantoms/screw_3p75mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/screw_3p75mm) - A phantom scene for screws 3.0 mm x 3.75 mm
-[virtual_phantoms/spherical_3mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/spherical_3mm) - A phantom scene for spherical fiducial 3.0 mm x 6.0 mm
-[virtual_phantoms/spherical_4mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/spherical_4mm) - A phantom scene for spherical fiducial 4.0 mm x 8.0 mm
+- [virtual_phantoms/screw_4p5mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/screw_4p5mm) - A phantom scene for screws 3.0 mm x 4.5 mm
+- [virtual_phantoms/screw_3mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/screw_3mm) - A phantom scene for screws 2.0 mm x 3.0 mm
+- [virtual_phantoms/screw_3p75mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/screw_3p75mm) - A phantom scene for screws 3.0 mm x 3.75 mm
+- [virtual_phantoms/spherical_3mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/spherical_3mm) - A phantom scene for spherical fiducial 3.0 mm x 6.0 mm
+- [virtual_phantoms/spherical_4mm](https://github.com/mregodic/FiducialMarkers/tree/master/virtual_phantoms/spherical_4mm) - A phantom scene for spherical fiducial 4.0 mm x 8.0 mm

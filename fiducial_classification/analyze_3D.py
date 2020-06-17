@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Mar 26 19:21:49 2020
-
-@author: Milovan
-"""
 import keras.backend as Kb
 
 
