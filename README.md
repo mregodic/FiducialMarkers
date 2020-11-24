@@ -2,6 +2,8 @@
 
 This repository provides the code and materials described in the paper "Automatic fiducial marker detection and localization in volumetric CT images: A combined approach with deep learning"
 
+The dataset is not publicly available but it can be requested: mregodic@outlook.com .
+
 Parts of the described algorithm are also based on previously reported approaches in [L. Gu and T. Peters (2004)](https://link.springer.com/chapter/10.1007/978-3-540-28626-4_40) and [G. Zheng et al. (2010)](https://pubmed.ncbi.nlm.nih.gov/21096801/).
 
 The design of the spherical fiducial marker available in this repository is protected with the [US patent 10524693](https://patents.justia.com/patent/10524693).
