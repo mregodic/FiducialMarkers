@@ -1,6 +1,7 @@
 # Automatic detection and localization of fiducial markers in CT images
 
-This repository provides the code and materials described in the paper "Automatic fiducial marker detection and localization in volumetric CT images: A combined approach with deep learning"
+This repository provides the code and materials described in the paper:
+Milovan Regodić, Zoltan Bardosi, Wolfgang Freysinger, "Automated fiducial marker detection and localization in volumetric computed tomography images: a three-step hybrid approach with deep learning," J. Med. Imag. 8(2), 025002 (2021), https://doi.org/10.1117/1.JMI.8.2.025002. 
 
 The dataset is not publicly available but it can be requested: mregodic@outlook.com .
 
